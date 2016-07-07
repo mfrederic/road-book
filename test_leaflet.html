@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test moto Road Book</title>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="fontello/css/fontello.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="fontello/css/animation.css">
+  <link rel="stylesheet" type="text/css" href="css/leaflet-routing-machine.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/1.0.0-rc.4/esri-leaflet-geocoder.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <link rel="stylesheet" type="text/css" href="css/generic.css">
+  <link rel="stylesheet" type="text/css" href="css/general.css">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/build-instructions.js"></script>
+  <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script type="text/javascript" src="js/esri-leaflet.js"></script>
+  <script type="text/javascript" src="js/esri-leaflet-geocoder.js"></script>
+  <script type="text/javascript" src="js/esri-leaflet-gp.js"></script>
+  <script type="text/javascript" src="js/leaflet-routing-machine.min.js"></script>
+  <script type="text/javascript" src="js/scripts_leaflet.js"></script>
+</head>
+<body>
+  <div id="wrap_content">
+    <div id="menu">
+
+      <h1 class="title">Moto RoadBook</h1>
+      <h3 class="under-title">Liste des points de passages <span class="add">+</span></h3>
+
+      <div id="options">
+        <div class="option animated">
+          <label for="avoid_highways">Eviter les autoroutes
+            <input type="checkbox" class="animated-checkbox" data-aim="div.option" id="avoid_highways" />
+            <span class="icon icon-check-empty"></span>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="points">
+        <div class="point checkpoint">
+          <label for="checkpoint_a">Par</label>
+          <input type="text" placeholder="par" id="checkpoint_a" />
+          <span class="clear"></span>
+        </div>
+
+        <div class="point checkpoint">
+          <label for="checkpoint_b">Par</label>
+          <input type="text" placeholder="par" id="checkpoint_b" />
+          <span class="clear"></span>
+        </div>
+      </div>
+
+      <div class="suggestions">
+
+      </div>
+
+      <button id="calculate_route" class="btn">Calculer le trajet</button>
+
+    </div>
+
+    <div id="map-canvas">
+
+      <div id="route_informations">
+        <div class="duration">
+          <h4>Durée</h4>
+          <span></span>
+        </div>
+        <div class="distance">
+          <h4>Distance</h4>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="route_instructions"></div>
+  </div>
+</body>
+</html>

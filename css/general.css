@@ -36,13 +36,42 @@
 	color: #000;
 }
 
-#menu .points {
-	position: relative;
-	cursor: default;
+#menu #options {
+	margin: 0 auto 25px;
 }
 
-#menu .points.sort-active {
-	background-color: rgba(46, 204, 113, 0.1);
+#menu #options .option {
+	display: block;
+	background-color: rgba(52, 152, 219, 0.1);
+	margin: 0 auto; padding: 0;
+	color: #222;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#menu #options .option.checked,
+#menu #options .option:hover,
+#menu #options .option:focus {
+	background-color: rgba(52, 152, 219, 0.7);
+	color: #FFF;
+}
+
+#menu #options .option label {
+	display: block;
+	padding: 10px;
+}
+
+#menu #options .option label input[type=checkbox] {
+	display: inline-block;
+	height: 0; width: 0;
+	border: none;
+	visibility: hidden;
+}
+
+#menu #options .option label span.icon {
+	display: inline-block;
+	font-weight: normal;
+	font-size: 22px;
 }
 
 #menu .points .point {
@@ -52,10 +81,9 @@
 
 #menu .points .point label {
 	float: left;
-	cursor: move;
 	display: inline-block;
 	margin: 0; padding: 10px 5px;
-	width: 26%;
+	width: 16%;
 	color: #777;
 	text-transform: uppercase;
 }
@@ -109,7 +137,7 @@
 }
 
 #menu .suggestions {
-	display: none;
+	display: block;
 	background-color: #FFF;
 	position: absolute;
 	z-index: 15000;
@@ -130,41 +158,6 @@
 #menu .suggestions a:focus {
 	background-color: rgba(52, 152, 219, 0.7);
 	color: #FFF;
-}
-
-#menu .options {
-	position: absolute;
-	bottom: 15px;
-	width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	border: none;
-}
-
-#menu .options .remove {
-	display: inline-block;
-	background-color: rgba(231, 76, 60, 0.2);
-	width: 100%;
-	padding: 5px 0; margin: 0;
-	text-align: center;
-	font-size: 18px;
-	cursor: default;
-}
-
-#menu .options .remove.sort-active {
-	background-color: rgba(231, 76, 60, 0.8);
-}
-
-#menu .options .remove div {
-	display: none;
-}
-
-#menu .options #calculate_route {
-	display: inline-block;
-	width: 100%;
-	padding: 5px 0; margin: 0;
-	text-align: center;
-	font-size: 18px;
 }
 
 #map-canvas {

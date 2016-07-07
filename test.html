@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test moto Road Book</title>
+  <link rel="stylesheet" type="text/css" href="fontello/css/fontello.css">
+  <link rel="stylesheet" type="text/css" href="fontello/css/animation.css">
+  <link rel="stylesheet" type="text/css" href="css/generic.css">
+  <link rel="stylesheet" type="text/css" href="css/general.css">
+  <meta charset="utf-8" />
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD52hJ4KYI0X8r8UltpMl07yBqpoCMOL_g"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+  <div id="wrap_content">
+    <div id="menu">
+
+      <h1 class="title">Moto RoadBook</h1>
+      <h3 class="under-title">Liste des points de passages <span class="add">+</span></h3>
+
+      <div id="options">
+        <div class="option animated">
+          <label for="avoid_highways">Eviter les autoroutes
+            <input type="checkbox" class="animated-checkbox" data-aim="div.option" id="avoid_highways" />
+            <span class="icon icon-check-empty"></span>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="points">
+        <div class="point begin">
+          <label for="begin">Depart</label>
+          <input type="text" placeholder="Départ" id="begin" />
+          <span class="clear"></span>
+        </div>
+
+        <div class="point end">
+          <label for="end">Arrivee</label>
+          <input type="text" placeholder="Arrivée" id="end" />
+          <span class="clear"></span>
+        </div>
+      </div>
+
+      <button id="calculate_route" class="btn">Calculer le trajet</button>
+
+    </div>
+    <div id="map-canvas"></div>
+  </div>
+</body>
+</html>

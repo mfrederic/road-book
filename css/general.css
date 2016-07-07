@@ -1,0 +1,238 @@
+#wrap_content {
+	width: 100%;
+	height: 100%;
+}
+
+#menu {
+	position: relative;
+	float: left;
+	width: 20%;
+	height: 100%;
+	box-shadow: 0 0 5px #000;
+	z-index: 8000;
+}
+
+#menu h1.title {
+	background-color: #3498db;
+	margin-bottom: 2px;
+	color: #FFF;
+}
+
+#menu h3.under-title {
+	background-color: #3498db;
+	margin-bottom: 20px;
+	color: #FFF;
+}
+
+#menu h3.under-title span.add {
+	display: inline-block;
+	padding: 0 5px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#menu h3.under-title span.add:hover {
+	background-color: rgba(0,0,0,0.1);
+	color: #000;
+}
+
+#menu .points {
+	position: relative;
+	cursor: default;
+}
+
+#menu .points.sort-active {
+	background-color: rgba(46, 204, 113, 0.1);
+}
+
+#menu .points .point {
+	margin: 5px 0;
+	background-color: rgba(52, 152, 219, 0.1);
+}
+
+#menu .points .point label {
+	float: left;
+	cursor: move;
+	display: inline-block;
+	margin: 0; padding: 10px 5px;
+	width: 26%;
+	color: #777;
+	text-transform: uppercase;
+}
+
+#menu .points .point input {
+	float: right;
+	display: inline-block;
+	background-color: transparent;
+	margin: 0; padding: 10px;
+	width: 75%;
+	color: #222;
+	border: none;
+	border-left: 1px solid rgba(52, 152, 219, 0.3);
+	border-bottom: 3px solid transparent;
+}
+
+#menu .points .point input.success {
+	border-bottom-color: rgba(46, 204, 113, 0.7); 
+}
+
+#menu .points .point input.error {
+	border-bottom-color: rgba(231, 76, 60, 0.7); 
+}
+
+#menu .points .point input:hover,
+#menu .points .point input:focus {
+	background-color: rgba(52, 152, 219, 0.7);
+	color: #FFF;
+}
+
+#menu .points .point.checkpoint input {
+	width: 65%;
+}
+
+#menu .points .point.checkpoint button.remove {
+	cursor: pointer;
+	display: inline-block;
+	background-color: transparent;
+	float: right;
+	margin: 0; padding: 10px 0;
+	width: 10%;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+}
+
+#menu .points .point.checkpoint button.remove:hover,
+#menu .points .point.checkpoint button.remove:focus {
+	background-color: rgba(52, 152, 219, 0.7);
+	color: #FFF;
+}
+
+#menu .suggestions {
+	display: none;
+	background-color: #FFF;
+	position: absolute;
+	z-index: 15000;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#menu .suggestions a{
+	display: block;
+	width: 350px;
+	padding: 10px;
+}
+
+#menu .suggestions a:nth-child(even) {
+	background-color: #EEE;
+}
+
+#menu .suggestions a:hover,
+#menu .suggestions a:focus {
+	background-color: rgba(52, 152, 219, 0.7);
+	color: #FFF;
+}
+
+#menu .options {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+}
+
+#menu .options .remove {
+	display: inline-block;
+	background-color: rgba(231, 76, 60, 0.2);
+	width: 100%;
+	padding: 5px 0; margin: 0;
+	text-align: center;
+	font-size: 18px;
+	cursor: default;
+}
+
+#menu .options .remove.sort-active {
+	background-color: rgba(231, 76, 60, 0.8);
+}
+
+#menu .options .remove div {
+	display: none;
+}
+
+#menu .options #calculate_route {
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0; margin: 0;
+	text-align: center;
+	font-size: 18px;
+}
+
+#map-canvas {
+	height: 100%;
+	margin: 0; padding: 0;
+	float: right;
+	width: 80%;
+}
+
+#route_informations {
+	display: none;
+	position: absolute;
+	top: 10px; left: 52px;
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.65);
+	overflow: hidden;
+	z-index: 1000;
+}
+
+#route_informations div {
+	display: block;
+}
+
+#route_informations div h4 {
+	background-color: #2c3e50;
+	margin: 0; padding: 5px 10px;
+	color: #FFF;
+}
+
+#route_informations div span {
+	display: block;
+	padding: 5px;
+	font-size: 11px;
+}
+
+#route_instructions {
+	background-color: #FFF;
+	display: none;
+	position: absolute;
+	top: 10px; right: 10px;
+	padding: 10px 0;
+	width: 350px;
+	max-height: 450px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.65);
+	overflow: auto;
+	z-index: 1000;
+}
+
+#route_instructions table {
+	display: block;
+	width: 100%;
+}
+
+#route_instructions table tr:nth-child(even) {
+	background-color: #EEE;
+}
+
+#route_instructions table tr.checkpoint {
+	background-color: rgba(52, 152, 219, 0.5);
+}
+
+#route_instructions table tr td {
+	padding: 5px;
+}
+
+#route_instructions table tr td p {
+	padding: 0; margin: 0;
+	font-size: 11px;
+}
